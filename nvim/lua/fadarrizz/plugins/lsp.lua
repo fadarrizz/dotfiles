@@ -64,15 +64,8 @@ return {
             }
         })
 
-        -- Mason's current Kotlin LSP build has expired. Use the newer JetBrains
-        -- distribution installed outside Mason, keeping `current` stable across updates.
-        vim.lsp.config('kotlin_lsp', {
-            cmd = { vim.fn.expand('~/.local/share/kotlin-lsp/current/bin/intellij-server'), '--stdio' },
-        })
-        vim.lsp.enable('kotlin_lsp')
-
         require('mason-lspconfig').setup({
-            ensure_installed = { 'html', 'eslint', 'intelephense', 'rust_analyzer', 'tailwindcss', 'dockerls', 'gopls', 'jsonls', 'bashls', 'pyright' },
+            ensure_installed = { 'html', 'eslint', 'intelephense', 'rust_analyzer', 'tailwindcss', 'dockerls', 'gopls', 'jsonls', 'bashls', 'pyright', 'kotlin_lsp' },
         })
 
         require("luasnip.loaders.from_vscode").lazy_load()
