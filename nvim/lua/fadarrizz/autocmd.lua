@@ -38,6 +38,17 @@ autocmd("RecordingLeave", {
     end
 })
 
+-- Snacks.nvim Rename
+-- https://github.com/folke/snacks.nvim/blob/main/docs/rename.md
+autocmd("User", {
+  pattern = "OilActionsPost",
+  callback = function(event)
+      if event.data.actions[1].type == "move" then
+          Snacks.rename.on_rename_file(event.data.actions[1].src_url, event.data.actions[1].dest_url)
+      end
+  end,
+})
+
 -- local function lazygit_edit(file, line)
 --     -- Close any leftover floating windows (e.g. Snacks lazygit float)
 --     for _, win in ipairs(vim.api.nvim_tabpage_list_wins(0)) do

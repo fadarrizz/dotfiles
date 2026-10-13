@@ -7,6 +7,8 @@ return {
     config = function()
       local ts = require("nvim-treesitter")
 
+      vim.filetype.add({ extension = { avsc = "json" } })
+
       ts.setup({
         install_dir = vim.fn.stdpath("data") .. "/site",
       })
@@ -47,6 +49,7 @@ return {
         "blade",
         "html",
         "kotlin",
+        "json",
       })
 
       vim.api.nvim_create_autocmd("FileType", {

@@ -87,8 +87,6 @@ brew "pinentry-mac"
 brew "pnpm"
 # Simple powerful testing with Python
 brew "pytest"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.10"
 # Ruby version manager
 brew "rbenv"
 # Search tool like grep and The Silver Searcher
@@ -141,6 +139,8 @@ cask "font-victor-mono"
 cask "google-chrome"
 # HTTP client from JetBrains IDEs available as a standalone CLI tool
 cask "ijhttp"
+# Java IDE by JetBrains
+cask "intellij-idea"
 # Keyboard customiser
 cask "karabiner-elements"
 # GPU-based terminal emulator
@@ -151,6 +151,8 @@ cask "libreoffice"
 cask "obsidian"
 # AI coding agent desktop client
 cask "opencode-desktop"
+# Music streaming service
+cask "spotify"
 # Native GUI tool for relational databases
 cask "tableplus"
 # JDK from the Eclipse Foundation (Adoptium)
@@ -163,6 +165,4 @@ cask "waterfox"
 cask "zoom"
 mas "Numbers", id: 409203825
 go "github.com/bootdotdev/bootdev"
-npm "@opencode-ai/cli"
 npm "corepack"
-npm "pnpm"
