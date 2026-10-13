@@ -1,1 +1,0 @@
-vim.bo.autoindent = true

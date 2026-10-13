@@ -65,7 +65,7 @@ return {
         })
 
         require('mason-lspconfig').setup({
-            ensure_installed = { 'html', 'eslint', 'intelephense', 'rust_analyzer', 'tailwindcss', 'dockerls', 'gopls', 'jsonls', 'bashls', 'pyright', 'kotlin_lsp' },
+            ensure_installed = { 'html', 'eslint', 'rust_analyzer', 'tailwindcss', 'dockerls', 'gopls', 'jsonls', 'bashls', 'pyright', 'kotlin_lsp' },
         })
 
         require("luasnip.loaders.from_vscode").lazy_load()
