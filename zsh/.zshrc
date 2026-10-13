@@ -23,6 +23,12 @@ source "$DOTFILES/zsh/custom/functions.zsh"
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh  # must be last among plugins
 
+if command -v gh >/dev/null 2>&1; then
+  GITHUB_API_TOKEN="$(gh auth token 2>/dev/null)" &&
+    export GITHUB_API_TOKEN &&
+    export HOMEBREW_GITHUB_API_TOKEN="$GITHUB_API_TOKEN"
+fi
+
 # Tools
 
 # NVM
